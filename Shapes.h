@@ -35,9 +35,12 @@ public:
     Square(double s, double x, double y);
 };
 
-class Diamond : public FIXME {
+class Diamond : public Shape {
     public: 
-        FIXME(FIXME, FIXME, FIXME)
+        void draw(TextGraphics& tg) const override;
+        Diamond(double r, double x, double y);
+    private:
+        double radius; 
 };
 
 void deleteVector(vector<Shape*>& v);

@@ -46,10 +46,18 @@ int main() {
 
         graphics.clearScreen();  //Clear the previous frame
 
-        std::string s = "Press c to draw a random circle";
-        graphics.putStringAt(0, graphics.width() / 2 - s.size() / 2, "Press c to draw a random circle", Color::Yellow);
 
-    
+        std::string c = "Press c to draw a random circle";
+        graphics.putStringAt(0, graphics.width() / 2 - c.size() / 2, "Press c to draw a random circle", Color::Yellow); 
+        
+        std::string t = "Press t to draw a random rectangle";
+        graphics.putStringAt(1, graphics.width() / 2 - t.size() / 2, "Press t to draw a random rectangle", Color::Red);
+
+        std::string x = "Press x to draw a random square";
+        graphics.putStringAt(2, graphics.width() / 2 - x.size() / 2, "Press x to draw a random square", Color::Green);
+
+
+
 
         for(Shape* p : v)
         {
