@@ -28,12 +28,17 @@ int main() {
 
         if (input == 't')
         {
-            v.push_back(new Rect(rand() % 6 + 1, rand() % 6 + 1, rand() % graphics.width(), rand() % graphics.height()));
+            v.push_back(new Rect(rand() % 5 + 1, rand() % 4 + 1, rand() % graphics.width(), rand() % graphics.height()));
         }
 
         if (input == 'x') {
-            v.push_back(new Square(rand() % 4 + 1, rand() % graphics.width(), rand() % graphics.height()));
+            v.push_back(new Square(rand() % 5 + 1, rand() % graphics.width(), rand() % graphics.height()));
         }
+
+        if (input == 'd') {
+            v.push_back(new Diamond(rand() % 5 + 1, rand() % graphics.width(), rand() % graphics.height()));
+        }
+
 
         ///update///////////////////////////////////////////////////////
 
@@ -55,6 +60,9 @@ int main() {
 
         std::string x = "Press x to draw a random square";
         graphics.putStringAt(2, graphics.width() / 2 - x.size() / 2, "Press x to draw a random square", Color::Green);
+
+        std::string d = "Press d to draw a random diamond";
+        graphics.putStringAt(3, graphics.width() / 2 - d.size() / 2, "Press d to draw a random diamond", Color::Magenta);
 
 
 
